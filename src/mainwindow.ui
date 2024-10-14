@@ -20,7 +20,11 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>QWidebandSpectrogram</string>
+   <string>QSpectrogram</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../favicon.ico</normaloff>../favicon.ico</iconset>
   </property>
   <widget class="TabViewerContainer" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
