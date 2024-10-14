@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>304</width>
+    <height>226</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>QWidebandSpectrogram</string>
+  </property>
+  <widget class="TabViewerContainer" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>304</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar::item { padding: 4px;}</string>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="NewViewerMenu">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>116</y>
+      <width>159</width>
+      <height>136</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>New Viewer</string>
+    </property>
+    <addaction name="Req_1panel"/>
+    <addaction name="Req_2panel"/>
+    <addaction name="Req_3panel"/>
+   </widget>
+   <addaction name="NewViewerMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="Req_1panel">
+   <property name="text">
+    <string>1 Panel</string>
+   </property>
+  </action>
+  <action name="Req_2panel">
+   <property name="text">
+    <string>2 Panels</string>
+   </property>
+  </action>
+  <action name="Req_3panel">
+   <property name="text">
+    <string>3 Panels</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TabViewerContainer</class>
+   <extends>QWidget</extends>
+   <header>include/tabviewercontainer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
