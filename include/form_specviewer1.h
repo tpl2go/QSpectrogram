@@ -47,6 +47,7 @@ public slots:
     void controller_nfft_changed();
     void controller_freqres_changed();
     void stride_fit_pressed();
+    void stride_halfnfft_pressed();
     void update_stft_size();
     void controller_updatedynamicrange(int a);
 

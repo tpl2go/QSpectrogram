@@ -117,6 +117,9 @@ void Form_SpecViewer1::setupController()
     QObject::connect(ui->stride_fit_btn, &QPushButton::clicked,
                      this, &Form_SpecViewer1::stride_fit_pressed);
 
+    QObject::connect(ui->stride_halfnfft, &QPushButton::clicked,
+                     this, &Form_SpecViewer1::stride_halfnfft_pressed);
+
     QObject::connect(ui->dynamicrange_input, &QAbstractSlider::valueChanged,
                      this, &Form_SpecViewer1::controller_updatedynamicrange);
 
@@ -393,8 +396,14 @@ void Form_SpecViewer1::stride_fit_pressed()
     int stride = (nsamples - ui->nfft_input->value()) / width;
 
     ui->stride_input->setValue(stride);
-
 }
+
+
+void Form_SpecViewer1::stride_halfnfft_pressed()
+{
+    ui->stride_input->setValue(ui->nfft_input->value()/2);
+}
+
 
 void Form_SpecViewer1::controller_updatedynamicrange(int a)
 {
